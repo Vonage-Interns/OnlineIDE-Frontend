@@ -1,9 +1,7 @@
-
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-
 import Toast from 'vue-toastification'
 import 'vue-toastification/dist/index.css'
 import StorageWrapper from './store/storageWrapper'
@@ -30,11 +28,10 @@ const toastOptions = {
 const app = createApp(App)
 app.use(store)
 app.use(router) 
-
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(Toast, toastOptions)
 
-if(localStorage.getItem('token') && !store.state.auth.isloggedIn){
+if(StorageWrapper.get("token") && !store.state.auth.isloggedIn){
   store.dispatch('auth/checkLogin',{
     email:StorageWrapper.get("email"),
     password:StorageWrapper.get("password")

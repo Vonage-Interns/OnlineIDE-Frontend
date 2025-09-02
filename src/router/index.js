@@ -6,15 +6,16 @@ import CompilerView from '../views/CompilerView.vue'
 import { useToast } from 'vue-toastification'
 import StorageWrapper from '@/store/storageWrapper'
 const toast=useToast();
+
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'HomePage',
     component: HomePage
   },
   {
     path: '/signup',
-    name: 'signup',
+    name: 'SignUp',
     component: SignUp
   },
   {
@@ -29,7 +30,7 @@ const routes = [
   },
   {
     path: '/compiler',
-    name: 'Compiler',
+    name: 'CompilerView',
     component: CompilerView,
     beforeEnter: (to, from, next) => {
       const token = StorageWrapper.get("token"); 
@@ -37,7 +38,6 @@ const routes = [
         next()
       } else {
         toast.error("User is Logged out ! Please Login");
-
         next('/login')
       }
     }
@@ -50,3 +50,4 @@ const router = createRouter({
 })
 
 export default router
+

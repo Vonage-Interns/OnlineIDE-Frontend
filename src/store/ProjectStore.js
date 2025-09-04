@@ -1,6 +1,6 @@
 import API_BASE_URL from "@/config";
-
 import StorageWrapper from "./storageWrapper";
+
 export default ({
     namespaced: true,
     state() {

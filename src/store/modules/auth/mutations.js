@@ -19,5 +19,9 @@ export default {
 
     ROOT_RENDERING(state, payload) {
         state.rootRendering = payload;
+    },
+
+    ASSIGN_USERNAME(state,payload){
+        state.firstName=payload;
     }
 };

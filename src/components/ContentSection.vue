@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import en from '@/locales/en';
+import en from '@/locales/en-US.json';
 
 export default{
     data(){

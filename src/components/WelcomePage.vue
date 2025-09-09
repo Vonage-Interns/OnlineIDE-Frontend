@@ -8,8 +8,7 @@
 </template>
 
 <script>
-import en from '@/locales/en';
-import StorageWrapper from '../store/storageWrapper';
+import en from '@/locales/en-US.json';
 
 export default{
   data(){
@@ -20,8 +19,8 @@ export default{
 
  computed:{
   username(){
-    const email=StorageWrapper.get('email')
-    return email.split('@')[0];
+    const username=this.$store.state.auth.firstName
+    return username;
   },
 
   content(){

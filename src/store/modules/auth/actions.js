@@ -42,6 +42,7 @@ export default {
 
             const val = data.data.token;
             commit("ASSIGN_TOKEN", val);
+            commit("ASSIGN_USERNAME",data.data.firstName)
         } else {
             return false;
         }

@@ -4,7 +4,7 @@ import SignUp from '../views/SignUp.vue'
 import LoginView from '../views/LoginView.vue'
 import CompilerView from '../views/CompilerView.vue'
 import { useToast } from 'vue-toastification'
-import StorageWrapper from '@/store/storageWrapper'
+import StorageWrapper from '../storageWrapper'
 const toast=useToast();
 
 const routes = [
